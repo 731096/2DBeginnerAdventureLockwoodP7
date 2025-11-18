@@ -5,13 +5,15 @@ using UnityEngine.InputSystem;
 
 public class playercontroller : MonoBehaviour
 {
-    public InputAction leftaction;
+    public InputAction Leftaction;
     public InputAction MoveACtion;
 
     // Start is called before the first frame update
     void Start()
     {
-        leftaction.Enable();
+       // QualitySettings.vSyncCount = 0;
+       // Application.targetFrameRate = 10;
+        Leftaction.Enable();
         MoveACtion.Enable();
     }
 
@@ -22,8 +24,9 @@ public class playercontroller : MonoBehaviour
 
         Vector2 move = MoveACtion.ReadValue<Vector2>();
         Debug.Log(move);
-        Vector2 position = (Vector2)transform.position + move * 0.1f;
-      
+        Vector2 position = (Vector2)transform.position + move * 3.0f * Time.deltaTime;
+        transform.position = position;
+   
 
     }
 }

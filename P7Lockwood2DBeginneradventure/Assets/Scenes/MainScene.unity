@@ -813,7 +813,6 @@ Tilemap:
       m_TileObjectToInstantiateIndex: 65535
       dummyAlignment: 0
       m_AllTileFlags: 1073741825
-      m_AllTileFlags: 1073741825
   - first: {x: -20, y: -19, z: 0}
     second:
       serializedVersion: 2
@@ -13283,8 +13282,8 @@ Transform:
   m_GameObject: {fileID: 2037162063}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -14.43, y: -0.01, z: 0}
-  m_LocalScale: {x: 0.92673004, y: 1.1768, z: 1.1768}
+  m_LocalPosition: {x: -0.3567, y: -1.4133, z: 0}
+  m_LocalScale: {x: -1.3253154, y: 1.1767529, z: 1.1768}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -13301,11 +13300,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e93fcb128c4fa074ca09bfe58b6225e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  leftaction:
+  Leftaction:
     m_Name: Leftaction
     m_Type: 0
     m_ExpectedControlType: 
-    m_Id: 4da346d9-d690-4bef-9c61-973a406395c0
+    m_Id: c3b16fcb-6f2f-43e1-a85a-1478a60750bd
     m_Processors: 
     m_Interactions: 
     m_SingletonActionBindings: []
@@ -13317,7 +13316,47 @@ MonoBehaviour:
     m_Id: 587e7e1d-1ab1-494b-a71f-86cb6e55a9ef
     m_Processors: 
     m_Interactions: 
-    m_SingletonActionBindings: []
+    m_SingletonActionBindings:
+    - m_Name: 2D Vector
+      m_Id: 55722022-1c7d-4aba-953a-d8e8fab9e57d
+      m_Path: 2DVector
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Move A Ction
+      m_Flags: 4
+    - m_Name: up
+      m_Id: f77bc5f2-e378-4bad-a189-222e37137024
+      m_Path: <Keyboard>/upArrow
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Move A Ction
+      m_Flags: 8
+    - m_Name: down
+      m_Id: a82b14e0-d857-4e80-ae2c-ebf7ad11e31f
+      m_Path: <Keyboard>/downArrow
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Move A Ction
+      m_Flags: 8
+    - m_Name: left
+      m_Id: 4108f4dd-0bf9-4acd-9e41-b67d738f8795
+      m_Path: <Keyboard>/leftArrow
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Move A Ction
+      m_Flags: 8
+    - m_Name: right
+      m_Id: ee842bef-ea6f-4414-8152-d52ad96ebbd9
+      m_Path: <Keyboard>/rightArrow
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Move A Ction
+      m_Flags: 8
     m_Flags: 0
 --- !u!1 &2037742731
 GameObject:
