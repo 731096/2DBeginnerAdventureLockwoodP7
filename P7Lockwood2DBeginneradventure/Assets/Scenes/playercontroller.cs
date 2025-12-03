@@ -5,28 +5,45 @@ using UnityEngine.InputSystem;
 
 public class playercontroller : MonoBehaviour
 {
-    public InputAction Leftaction;
-    public InputAction MoveACtion;
+    public InputAction MoveAction;
+    Rigidbody2D rigidbody2d;
+    Vector2 move;
+    int currentHealth;
 
-    // Start is called before the first frame update
+    public float speed = 3.0f;
+
+
+    public int maxHealth = 5;
+    int currenthealth;
+    
     void Start()
     {
-       // QualitySettings.vSyncCount = 0;
-       // Application.targetFrameRate = 10;
-        Leftaction.Enable();
-        MoveACtion.Enable();
+        MoveAction.Enable();
+        rigidbody2d = GetComponent<Rigidbody2D>();
+        currentHealth = maxHealth;
     }
 
     // Update is called once per frame
     void Update()
     {
-
-
-        Vector2 move = MoveACtion.ReadValue<Vector2>();
-        Debug.Log(move);
-        Vector2 position = (Vector2)transform.position + move * 8.0f * Time.deltaTime;
-        transform.position = position;
-   
-
+        move = MoveAction.ReadValue<Vector2>();
+        Debug.Log(move); 
     }
+
+
+    private void FixedUpdate()
+    {
+        Vector2 position = (Vector2)rigidbody2d.position + move * speed * Time.deltaTime;
+        rigidbody2d.MovePosition(position);
+    }
+
+    void ChangeHealth (int amount) 
+    {
+        currenthealth = Mathf.Clamp(currenthealth + amount, 0, maxHealth);
+        Debug.Log(currenthealth + "/" + maxHealth);
+    
+    }
+
+
+
 }
